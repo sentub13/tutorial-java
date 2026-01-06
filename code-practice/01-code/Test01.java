@@ -27,14 +27,14 @@ public class Main01 {
         // Palindrome();
         // DuplicateCharacters();
         // RemoveDuplicates();
-        VowelConsonantCount();
+        // VowelConsonantCount();
         // AnagramCheck();
         // CountOccurrences();
 
         // 03. Number Operations  ==============================
         // EvenOdd();
         // ReverseInteger();
-        // SumOfDigitsOne();
+        SumOfDigitsOne();
         // SumOfDigitsTwo();
         // SumOfNaturalNumbers();
         // StringToInteger();
@@ -270,9 +270,13 @@ public class Main01 {
 			char ch = Character.toLowerCase(strArr[i]);
 			
 			if(ch >= 'a' && ch <= 'z') {
-				if() {
-					
-				}
+				// if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+					System.out.println("This is vowels : " + strArr[i]);
+                    break;
+				} else {
+                    System.out.println("This is vowels : " + strArr[i]);
+                }
 			}
 			
 		}
@@ -284,10 +288,21 @@ public class Main01 {
     public static void AnagramCheck() {
         String str1 = "listen";  // Example strings
         String str2 = "silent";
-
+		
+		char[] char1 = str1.toCharArray();
+		char[] char2 = str2.toCharArray();
+		
+		Arrays.sort(char1);
+		Arrays.sort(char2);
         
 		
-		System.out.println("result: ");
+		if(Arrays.equals(char1, char2)) {
+			System.out.println("result: is Anagram");
+		} else {
+			System.out.println("result: is not Anagram");
+		}
+		
+		
     }
 
     // 6. Count the Number of Occurrences of a Character in a String
@@ -295,35 +310,52 @@ public class Main01 {
         String str = "programming";  // Example string
         char targetChar = 'r';  // Character to count
         int count = 0;
-
-		System.out.println("result: ");
+		
+		for(int i = 0; i < str.length(); i++) {
+			// System.out.println("result: " + i);
+			// System.out.println("result: " + str.charAt(i));
+			if(str.charAt(i) == targetChar) {
+				count ++;
+			}
+		}
+		System.out.println("result: " + count);
+		
     }
     
     // 03. Number Operations  ==========================================================
    // 1. Check if a Number is Even or Odd
     public static void EvenOdd() {
-        int number = 7;  // Example number
-
-        
+        int number = 8;  // Example number
+		if(number % 2 == 0) {
+			System.out.println("result: even");
+		} else {
+			System.out.println("result: odd");
+		}			
 		
-		System.out.println("result: ");
+		//System.out.println("result: ");
     }
 
    // 2. Reverse an Integer Number
     public static void ReverseInteger() {
         int number = 12345;
-        
-		
-		System.out.println("result: ");
+        char[] charArr = String.valueOf(number).toCharArray();
+		for(int i = charArr.length-1; i>=0; i--) {
+			System.out.println("result: 1 " + charArr[i]);
+		}
     }
 
     // 3. Find the Sum of Digits of a Number
     public static void SumOfDigitsOne() {
         int number = 1234;  // Example number
         int sum = 0;
-        
+        char[] charArr = String.valueOf(number).toCharArray();
 		
-		System.out.println("result: ");
+		for(int i = 0; i < charArr.length; i++) {
+			// System.out.println("result: " + charArr[i]);
+			sum += charArr[i] - '0';
+		}
+		
+		System.out.println("result: " + sum);
     }
 
     // 4. Find the Sum of Digits of a Number
@@ -610,5 +642,3 @@ public class Main01 {
     //   * *
     //    *
 }
-
-

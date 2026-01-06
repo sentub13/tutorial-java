@@ -379,14 +379,13 @@ public class Main01 {
     public static void SumOfDigitsOne() {
         int number = 1234;  // Example number
         int sum = 0;
-
-        // Loop to find the sum of digits
-        while (number != 0) {
-            sum += number % 10;  // Add last digit
-            number /= 10;         // Remove last digit
-        }
-
-        System.out.println("Sum of digits: " + sum);
+        char[] charArr = String.valueOf(number).toCharArray();
+		
+		for(int i = 0; i < charArr.length; i++) {
+			sum += charArr[i] - '0';
+		}
+		
+		System.out.println("result: " + sum);
     }
 
     // 4. Find the Sum of Digits of a Number
