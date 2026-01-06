@@ -35,7 +35,7 @@ public class Main01 {
         // EvenOdd();
         // ReverseInteger();
         // SumOfDigitsOne();
-        // SumOfDigitsTwo();
+        // SumNumberDouble();
         // SumOfNaturalNumbers();
         // StringToInteger();
         // PrimeNumber();
@@ -246,9 +246,8 @@ public class Main01 {
     }
 
     // 4. Find the Sum of Digits of a Number
-    public static void SumOfDigitsTwo() {
-        int number = 1230;
-        int sum = 0;
+    public static void SumNumberDouble() {
+        int value = 1;
         
 
         System.out.println("result: ");

@@ -34,14 +34,14 @@ public class Main01 {
         // 03. Number Operations  ==============================
         // EvenOdd();
         // ReverseInteger();
-        SumOfDigitsOne();
-        // SumOfDigitsTwo();
+        // SumOfDigitsOne();
+        // SumNumberDouble();
         // SumOfNaturalNumbers();
         // StringToInteger();
         // PrimeNumber();
         // PrimeNumbers();
         // PerfectNumber();
-        // PerfectSquare();
+        PerfectSquare();
         // ArmstrongNumber();
         // GreatestCommonDivisor();
         // LeastCommonMultiple();
@@ -359,29 +359,34 @@ public class Main01 {
     }
 
     // 4. Find the Sum of Digits of a Number
-    public static void SumOfDigitsTwo() {
-        int number = 1230;
-        int sum = 0;
-        
+    public static void SumNumberDouble() {
+       int value = 1;
 
-        System.out.println("result: ");
+        for (int i = 1; i <= 31; i++) {
+            System.out.println(i + " - " + value);
+            value = value * 2;   // doubling the value
+        }
+
+        System.out.println("Result --- " + value);
     }
 
 
     // 5. Find the Sum of Natural Numbers
     public static void SumOfNaturalNumbers() {
-        int n = 10;  // Example: sum of first 10 natural numbers
+        int n = 3;  // Example: sum of first 10 natural numbers
         int sum = 0;
-        
+		 for (int i = 1; i <= n; i++) {
+			 sum += i;
+		 }
 
-        System.out.println("result: ");
+        System.out.println("result: " + sum);
     }
 
     // 6. Convert a String to an Integer
     public static void StringToInteger() {
         String str = "12345";  // Example string
 
-        System.out.println("result: ");
+        System.out.println("result: " + Integer.parseInt(str));
     }
 
     // 7. Find Whether a Number is Prime or Not
@@ -398,23 +403,50 @@ public class Main01 {
 		int startNum = 2;
 		int endNum = 100;
 	
-        
-		
-		System.out.println("result: ");
+        for(int i = 2; i < endNum; i++) {
+			boolean isPrime = true;			
+			for(int j = 2; j<Math.sqrt(i); j++) {
+				if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+				
+			}
+			if (isPrime) {
+                System.out.print(i + " ");
+            }
+		}
     }
 
     // 9. Check if a Number is a Perfect Number
     public static void PerfectNumber() {
-        int number = 28;  // Example number
+        int number = 29;  // Example number
         int sum = 0;
 		
-		System.out.println("result: ");
+		for(int i = 1; i < number; i++) {
+			if(number % i == 0) {
+				sum += i;
+			}
+		}
+		
+		if(sum == number ){
+			System.out.println(number + " is a perfect number.");
+		} else {
+			System.out.println(number + " is not a perfect number.");
+		}
+		System.out.println("result: " + sum);
     }
 
     // 10. Check if a Number is a Perfect Square
     public static void PerfectSquare() {
-        int number = 25;  // Example number
-
+        int number = 26;  // Example number
+		double sqrt = Math.sqrt(number);
+		
+		if(sqrt == (int) sqrt) {
+			System.out.println(number + " is a perfect square.");
+		} else {
+			System.out.println(number + " is not a perfect square.");
+		}
         		
 		System.out.println("result: ");
     }
