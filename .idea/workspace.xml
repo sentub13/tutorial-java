@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baad18ba-f7ad-4c7e-a7ec-124e38f1b349" name="Changes" comment="" />
+    <list default="true" id="baad18ba-f7ad-4c7e-a7ec-124e38f1b349" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/java-excercise/02-code/02-Constructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-excercise/02-code/02-Constructor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-excercise/02-code/03-Overloading-Overriding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-excercise/02-code/03-Overloading-Overriding/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +27,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "local-v3",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/UST/tutorial/git-works/tutorial-java"
   }
